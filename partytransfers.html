@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ibiza Party Transfers</title>
+<meta property="og:title" content="Ibiza Party Transfers">
+<meta property="og:description" content="VIP party bus transfers across Ibiza. Flight tracked pickups, your playlist on board, book online in two minutes.">
+<meta property="og:image" content="https://assets.cdn.filesafe.space/V6PrBRAEkyF3deHWSoO4/media/6aa3ca47060c86b932c1a30d.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --lavender:#f7ecfe; --white:#ffffff; --lilac:#ead4fb; --lilac-border:#d2b1f5;
+  --purple:#bf2df2; --aqua:#7ef7f0; --indigo:#2b2a80; --navy:#1f1b5b;
+  --veil:#3c1470; --green:#8ff37e; --grad-a:#5ec8ff; --grad-b:#bf2df2;
+  --ink:#2b2b33; --grey:#6b6b78; --sans:'Poppins','Segoe UI',Arial,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--lavender);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased}
+i,em,.italic{font-style:normal !important}
+img{max-width:100%;display:block}
+p{margin:0 0 12px}
+
+.card{max-width:900px;margin:32px auto;border-radius:24px;overflow:hidden;box-shadow:0 14px 44px rgba(60,20,112,.14);background:
+  radial-gradient(circle at 88% 6%, rgba(126,247,240,.12) 0, rgba(126,247,240,0) 22%),
+  radial-gradient(circle at 6% 24%, rgba(191,45,242,.07) 0, rgba(191,45,242,0) 20%),
+  radial-gradient(circle at 92% 52%, rgba(94,200,255,.09) 0, rgba(94,200,255,0) 20%),
+  radial-gradient(circle at 8% 78%, rgba(255,80,200,.07) 0, rgba(255,80,200,0) 20%),
+  var(--white)}
+
+/* Hero: clean image, veil applied in CSS below (30% lighter than the heavy veil) */
+.hero{position:relative;height:480px;overflow:hidden;background-image:url('https://assets.cdn.filesafe.space/V6PrBRAEkyF3deHWSoO4/media/6aae529730b0f957cc839e2d.jpg');background-size:cover;background-position:center}
+.hero-logo{position:absolute;top:26px;left:34px;width:150px;z-index:2}
+.hero::before{content:"";position:absolute;top:0;right:0;bottom:0;left:0;background:linear-gradient(180deg,rgba(60,20,112,.21) 0%,rgba(60,20,112,.41) 42%,rgba(31,27,91,.65) 78%,rgba(20,14,60,.68) 100%)}
+.hero-copy{position:absolute;left:48px;right:48px;bottom:44px;z-index:2}
+.hero-eyebrow{display:inline-block;margin:0 0 10px;font-size:13px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--lilac)}
+.hero-title{margin:0 0 10px;font-weight:700;font-size:44px;line-height:1.15;color:#fff}
+.hero-title .name{color:var(--aqua)}
+.hero-sub{margin:0 0 18px;font-size:18px;color:#fff}
+.hero-pills{display:flex;flex-wrap:wrap;gap:10px}
+.hero-pill{background:rgba(20,12,50,.55);border:1px solid rgba(255,255,255,.35);color:#fff;font-weight:500;font-size:14.5px;padding:9px 16px;border-radius:999px}
+
+.sec{padding:36px 48px 20px}
+.h2{display:flex;align-items:center;gap:12px;margin:0 0 6px;padding-bottom:10px;border-bottom:2px solid var(--lilac-border);font-weight:700;font-size:26px;line-height:1.25;color:var(--indigo)}
+.lead{margin:16px 0 22px;max-width:70ch}
+.label{margin:22px 0 10px;font-size:12px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--purple)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+
+.fcard{background:var(--white);border:1px solid #ecdcf7;border-radius:14px;padding:22px 22px 20px;text-align:center;box-shadow:0 8px 24px rgba(60,20,112,.06)}
+.fcard .ico{font-size:30px;line-height:1;margin:0 0 10px}
+.fcard h4{margin:0 0 6px;font-weight:600;font-size:18px;color:var(--indigo)}
+.fcard p{margin:0;font-size:15px}
+.fcard.hi{background:linear-gradient(135deg,var(--grad-a) 0%,var(--grad-b) 100%);border:0;color:#fff}
+.fcard.hi h4,.fcard.hi p{color:#fff}
+
+/* Placeholder tiles for CDN assets the preview can't load */
+.ph{position:relative;border-radius:10px;overflow:hidden;background:
+  radial-gradient(circle at 25% 30%, rgba(191,45,242,.55) 0, rgba(191,45,242,0) 30%),
+  radial-gradient(circle at 75% 25%, rgba(94,200,255,.4) 0, rgba(94,200,255,0) 28%),
+  linear-gradient(160deg,#141040 0%,#2a1560 50%,#0f0c30 100%)}
+.ph .tag{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);background:rgba(255,255,255,.88);color:var(--navy);font-size:12.5px;font-weight:600;padding:6px 12px;border-radius:999px;white-space:nowrap}
+.vid{aspect-ratio:16/9}
+.vid .play{position:absolute;left:50%;top:34%;transform:translate(-50%,-50%);font-size:40px}
+.vid-cap{margin:8px 0 0;font-size:13px;font-weight:600;color:var(--indigo);text-align:center}
+
+.frame{position:relative;padding:0 0 18px 18px}
+.frame::before{content:"";position:absolute;top:18px;right:18px;bottom:0;left:0;background:linear-gradient(135deg,var(--grad-a) 0%,var(--grad-b) 100%);border-radius:6px}
+.frame .fleet-img{position:relative;width:100%;height:276px;object-fit:cover;border-radius:6px;display:block}
+
+.break{position:relative;height:340px;overflow:hidden}
+.break .veil-light{position:absolute;top:0;right:0;bottom:0;left:0;background:linear-gradient(180deg,rgba(60,20,112,.35) 0%,rgba(60,20,112,.62) 55%,rgba(31,27,91,.88) 100%)}
+.break .line{position:absolute;left:48px;right:36%;top:36px;z-index:2;text-align:left;color:#fff;font-weight:700;font-size:34px;line-height:1.25;text-shadow:0 2px 16px rgba(20,12,50,.85)}
+.break .tag{position:absolute;left:50%;top:40%;transform:translate(-50%,-50%);z-index:2;background:rgba(255,255,255,.88);color:var(--navy);font-size:12.5px;font-weight:600;padding:6px 12px;border-radius:999px;white-space:nowrap}
+
+.panel{background:var(--lilac);border-radius:14px;padding:22px 26px}
+.panel p{margin:0}
+.panel b{color:var(--indigo)}
+
+.btn{display:inline-block;font-weight:700;font-size:15px;line-height:1.2;padding:13px 24px;border-radius:999px;text-decoration:none;border:0;cursor:pointer;font-family:var(--sans)}
+.btn-aqua{background:var(--aqua);color:var(--navy)}
+.btn-green{background:var(--green);color:var(--navy)}
+.center{text-align:center}
+
+.form-card{background:var(--lavender);border:1px solid var(--lilac-border);border-radius:14px;padding:26px 26px 22px}
+.f-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:0 0 14px}
+.f-field label{display:block;font-size:14px;font-weight:600;color:var(--indigo);margin:0 0 5px}
+.f-field select,.f-field input{width:100%;padding:11px 12px;border:1px solid var(--lilac-border);border-radius:10px;background:var(--white);font-family:var(--sans);font-size:15px;color:var(--ink)}
+.price-box{margin:6px 0 14px;background:var(--white);border:1px solid var(--lilac-border);border-radius:12px;padding:16px 18px;text-align:center}
+.price-box .total{font-weight:700;font-size:22px;color:var(--indigo)}
+.price-box .total .amount{color:var(--purple)}
+.price-box .each{font-size:14px;color:var(--grey);margin-top:2px}
+.wa-note{background:var(--lilac);border-radius:12px;padding:16px 18px;text-align:center;margin:6px 0 14px}
+.caveat{margin:14px auto 0;font-size:12px;line-height:1.6;color:var(--grey);background:var(--white);border:1px solid var(--lilac-border);border-radius:12px;padding:12px 18px;max-width:640px}
+
+.signoff{text-align:center;color:var(--grey);font-size:16px;padding:8px 20px 0}
+.small-print{margin:0 48px 28px;padding:14px 18px;font-size:10.5px;color:#9a9aa8;line-height:1.55;text-align:center;background:#fbf8fe;border:1px solid #ecdcf7;border-radius:12px}
+
+.foot{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:32px 48px;background:var(--navy);color:#fff}
+.foot img.logo{width:150px}
+.foot .brand{text-align:center;font-weight:600;font-size:18px}
+.foot .brand span{display:block;font-weight:400;font-size:14px;color:var(--lilac);margin-top:2px}
+.foot img.qr{width:108px;border-radius:8px}
+
+@media (max-width:680px){
+  .card{margin:0;border-radius:0}
+  .hero{height:440px}
+  .hero-logo{width:120px;top:18px;left:20px}
+  .hero-copy{left:22px;right:22px;bottom:28px}
+  .hero-title{font-size:32px}
+  .hero-sub{font-size:16px}
+  .sec{padding:28px 22px 14px}
+  .v-row{grid-template-columns:1fr}
+  .side-img{height:260px}
+  video.v-portrait{max-width:240px;margin:0 auto}
+  .break{height:260px}
+  .break .line{font-size:23px;top:22px;left:22px;right:22px}
+  .grid2{grid-template-columns:1fr}
+  .f-row{grid-template-columns:1fr}
+  .small-print{margin:0 22px 24px}
+  .foot{flex-direction:column;padding:28px 22px}
+}
+video{width:100%;aspect-ratio:16/9;border-radius:12px;display:block;background:#000;object-fit:cover}
+.vstack{display:grid;grid-template-columns:1fr;gap:22px}
+video.v-portrait{aspect-ratio:9/16}
+video.v-tall{aspect-ratio:3/4}
+.v-row{display:grid;grid-template-columns:1fr 2.07fr;gap:20px;align-items:start}
+.insert-img{width:100%;border-radius:12px;display:block;margin:20px 0 0}
+.img-natural{width:100%;height:auto;border-radius:12px;display:block}
+.night-strip{border-radius:16px;padding:24px;margin:0 0 4px;background:
+  radial-gradient(circle at 20% 25%, rgba(191,45,242,.5) 0, rgba(191,45,242,0) 35%),
+  radial-gradient(circle at 80% 20%, rgba(94,200,255,.4) 0, rgba(94,200,255,0) 32%),
+  linear-gradient(160deg,#141040 0%,#2a1560 55%,#0f0c30 100%)}
+.dcard{background:rgba(0,0,0,.35);border:1px solid rgba(255,255,255,.2);border-radius:14px;padding:18px 18px 16px;text-align:center;color:#fff}
+.dcard .ico{font-size:28px;line-height:1;margin:0 0 8px}
+.dcard h4{margin:0 0 5px;font-weight:600;font-size:17px;color:#fff}
+.dcard p{margin:0;font-size:14.5px;color:#e9defa}
+.c-card{display:flex;align-items:flex-start;gap:14px;background:var(--white);border:1px solid #ecdcf7;border-radius:14px;padding:16px 18px;box-shadow:0 6px 18px rgba(60,20,112,.07)}
+.c-card h4{margin:0 0 4px;font-weight:600;font-size:17px;color:var(--indigo)}
+.c-card p{margin:0;font-size:14.5px}
+.c-tile{flex:0 0 46px;width:46px;height:46px;border-radius:12px;background:linear-gradient(135deg,var(--grad-a) 0%,var(--grad-b) 100%);display:flex;align-items:center;justify-content:center;font-size:23px}
+.c-card.hi{background:linear-gradient(135deg,var(--grad-a) 0%,var(--grad-b) 100%);border:0}
+.c-card.hi h4,.c-card.hi p{color:#fff}
+.c-card.hi .c-tile{background:rgba(255,255,255,.92)}
+.side-img{width:100%;height:340px;object-fit:cover;border-radius:12px;display:block}
+</style>
+</head>
+<body>
+<div class="card">
+
+  <!-- HERO -->
+  <div class="hero">
+    <img class="hero-logo" style="position:absolute;z-index:2" src="https://assets.cdn.filesafe.space/V6PrBRAEkyF3deHWSoO4/media/6a2900e7edb8dba658b90457.png" alt="Ibiza Party Transfers">
+    <div class="hero-copy">
+      <span class="hero-eyebrow">Transfers &#128656;</span>
+      <h1 class="hero-title">Ibiza Transfers <span class="name">&amp; Party Bus</span></h1>
+      <p class="hero-sub">Ibiza's number one transfers specialist. Book online in two minutes.</p>
+      <div class="hero-pills">
+        <span class="hero-pill">&#9992;&#65039; Flight tracked</span>
+        <span class="hero-pill">&#128101; 4 to 20 guests</span>
+        <span class="hero-pill">&#127925; Your playlist</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- THE BUS -->
+  <div class="sec">
+    <h2 class="h2">&#10024; Your VIP Party Bus</h2>
+    <p class="lead">Luxury transfers across the island, and the VIP party bus everyone asks for. Your group only, your music, and a driver who already knows your flight number.</p>
+    <div class="night-strip">
+    <div class="grid2">
+      <div class="dcard"><div class="ico">&#128656;</div><h4>Private VIP Party Bus</h4><p>Your group only, nobody else on board.</p></div>
+      <div class="dcard"><div class="ico">&#129346;</div><h4>Add Fizz on Board</h4><p>An optional extra, subject to availability. A glass in hand before you have left the car park.</p></div>
+      <div class="dcard"><div class="ico">&#128161;</div><h4>LED Lights and Disco Vibes</h4><p>The party starts the moment the doors close.</p></div>
+      <div class="dcard"><div class="ico">&#127925;</div><h4>Bluetooth Sound System</h4><p>Your playlist, your volume, your rules.</p></div>
+      <div class="dcard"><div class="ico">&#10052;&#65039;</div><h4>Air-Con</h4><p>Cool and fresh on arrival, whatever the weather.</p></div>
+      <div class="dcard"><div class="ico">&#129489;&#8205;&#9992;&#65039;</div><h4>Professional Driver</h4><p>Flight tracked on airport pickups, so a late landing is fine.</p></div>
+    </div>
+    </div>
+    <img class="insert-img" src="https://assets.cdn.filesafe.space/V6PrBRAEkyF3deHWSoO4/media/6aae7cafbdaa5e26a936f4b4.jpg" alt="LED lights inside the party bus at night">
+  </div>
+
+  <!-- VIDEOS -->
+  <div class="sec">
+    <h2 class="h2">&#127909; See the Bus in Action</h2>
+    <p class="lead">Tap a video and have a look for yourself. Sound on &#128266;</p>
+    <div class="v-row">
+      <div>
+        <video class="v-portrait" controls preload="metadata" playsinline poster="https://assets.cdn.filesafe.space/V6PrBRAEkyF3deHWSoO4/media/6aae78734091fa65e6766c9e.png" src="https://assets.cdn.filesafe.space/V6PrBRAEkyF3deHWSoO4/media/6aae7525bdaa5e26a9366844.mp4"></video>
+        <p class="vid-cap">&#127769; Night transfer</p>
+      </div>
+      <div>
+        <video controls preload="metadata" playsinline poster="https://assets.cdn.filesafe.space/V6PrBRAEkyF3deHWSoO4/media/6aae7e7ade8ed1c29f6c303b.jpg" src="https://assets.cdn.filesafe.space/V6PrBRAEkyF3deHWSoO4/media/6aae7d64de8ed1c29f6c1738.mp4"></video>
+        <p class="vid-cap">&#9728;&#65039; Daytime transfer</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- FLEET / OFFSET FRAME -->
+  <div class="sec">
+    <div class="grid2">
+      <div class="frame"><img class="fleet-img" src="https://assets.cdn.filesafe.space/V6PrBRAEkyF3deHWSoO4/media/6a30f3111b95dbb2c219e7c6.jpg" alt="Our fleet of luxury party buses"></div>
+      <div>
+        <div class="c-tile" style="margin-bottom:12px">&#128656;</div>
+        <p class="label" style="margin-top:0">Our Fleet</p>
+        <p style="font-weight:600;font-size:19px;color:var(--indigo);margin-bottom:8px">Ibiza's Favourite Party Bus Providers</p>
+        <p>A fleet of luxury vehicles from 4 to 20 seats, with cava and drinks on board to make your trip smooth and enjoyable. Groups of more than 14 travel in two buses, and we arrange that for you in one chat.</p>
+        <a class="btn btn-green" href="https://wa.me/27695408842">&#128172; WhatsApp us</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- POPULAR GROUPS -->
+  <div class="sec">
+    <div class="grid2" style="align-items:center">
+      <img class="img-natural" src="https://assets.cdn.filesafe.space/V6PrBRAEkyF3deHWSoO4/media/6aae7b254091fa65e676a4ba.jpg" alt="A hen group arriving at the airport">
+      <div>
+        <div class="c-tile" style="margin-bottom:12px">&#127872;</div>
+        <p class="label" style="margin-top:0">Our Most Popular Groups</p>
+        <p style="font-weight:600;font-size:19px;color:var(--indigo);margin-bottom:8px">Hen and Stag Do's</p>
+        <p>Most of our buses are booked by hen and stag groups, and the transfer is usually the first thing they sort. Tell us what you are celebrating, and Pretty Intricate will plan the rest of the trip around it.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- COLLECTION -->
+  <div class="sec">
+    <div class="grid2" style="align-items:center">
+      <div>
+        <div class="c-tile" style="margin-bottom:12px">&#128205;</div>
+        <p class="label" style="margin-top:0">Collection</p>
+        <p style="font-weight:600;font-size:19px;color:var(--indigo);margin-bottom:8px">Anywhere on the Island, Any Hour</p>
+        <p>Villa, hotel, port or airport. Day or night. Send us the pin and the time, and the bus is outside your door.</p>
+      </div>
+      <img class="img-natural" src="https://assets.cdn.filesafe.space/V6PrBRAEkyF3deHWSoO4/media/6aae72ce30b0f957cc859a7c.jpg" alt="The party bus collecting a group at their villa">
+    </div>
+  </div>
+
+  <!-- PAGE BREAK: DISCO BALL -->
+  <div class="break" style="background-image:url('https://assets.cdn.filesafe.space/1vA1AJ4I5RrqbeQNHvSv/media/6aae630e4091fa65e6751373.jpg');background-size:cover;background-position:center 32%">
+    <div class="line">&#10024; The transfer is just the start</div>
+  </div>
+
+  <!-- PRETTY INTRICATE -->
+  <div class="sec">
+    <h2 class="h2">&#127872; Want the Whole Trip Planned?</h2>
+    <p class="lead">Hen and stag itineraries, boats, villas, open bar pre-parties and nights out, all sorted by our partner Pretty Intricate, in the same chat as your transfer.</p>
+    <div class="grid2">
+      <div>
+        <video class="v-tall" controls preload="metadata" playsinline poster="https://assets.cdn.filesafe.space/1vA1AJ4I5RrqbeQNHvSv/media/6aa322b59a6d26f39f95a84d.jpg" src="https://assets.cdn.filesafe.space/1vA1AJ4I5RrqbeQNHvSv/media/6aa31ea9a91f276457fc519f.mp4"></video>
+      </div>
+      <div>
+        <video class="v-tall" controls preload="metadata" playsinline poster="https://assets.cdn.filesafe.space/1vA1AJ4I5RrqbeQNHvSv/media/6aa322b58f6a930b7d22a3c5.jpg" src="https://assets.cdn.filesafe.space/1vA1AJ4I5RrqbeQNHvSv/media/6aa31ea977a519d231df6cd0.mp4"></video>
+      </div>
+    </div>
+    <div class="grid2" style="margin-top:20px">
+      <div class="c-card"><div class="c-tile">&#127865;</div><div><h4>Open Bar Pre-Parties</h4><p>Unlimited drinks for three hours at popular venues all over town. Everyone arrives together, already in the mood, with no bar tab waiting.</p></div></div>
+      <div class="c-card"><div class="c-tile">&#128676;</div><div><h4>Boat Parties</h4><p>DJ, swim stop and an open bar on the water. Always a sell-out.</p></div></div>
+      <div class="c-card"><div class="c-tile">&#129374;</div><div><h4>Bottomless Brunches</h4><p>Food, fizz and the best start to a big day.</p></div></div>
+      <div class="c-card hi"><div class="c-tile">&#127872;</div><div><h4>And a Whole Lot More</h4><p>Club entries, pool parties, cheeky entertainment, villa activities, quad biking, picnics, dance classes. Ask us what's possible.</p></div></div>
+    </div>
+    <p class="center" style="margin-top:22px"><a class="btn btn-green" href="https://wa.me/27695408842?text=Hi%2C%20we%20would%20love%20to%20hear%20about%20open%20bar%20pre-parties%2C%20boat%20parties%20and%20brunches%20x">&#128172; WhatsApp us about the fun stuff</a></p>
+  </div>
+
+  <!-- BOOKING -->
+  <div class="sec" id="book">
+    <h2 class="h2">&#9889; Book Your Bus Online</h2>
+    <p class="lead">Pick your route, see your price, pay, and your bus is locked in. If your trip is bigger than the form, WhatsApp us and a human will sort it. x</p>
+
+    <div class="form-card">
+      <div class="f-row">
+        <div class="f-field"><label for="f_pickup">&#128205; Pick-up</label><select id="f_pickup"></select></div>
+        <div class="f-field"><label for="f_dropoff">&#127937; Drop-off</label><select id="f_dropoff"></select></div>
+      </div>
+      <div class="f-row">
+        <div class="f-field"><label for="f_date">&#128197; Date</label><input type="date" id="f_date"></div>
+        <div class="f-field"><label for="f_time">&#9200; Pick-up time</label><input type="time" id="f_time"></div>
+      </div>
+      <div class="f-row">
+        <div class="f-field"><label for="f_guests">&#128101; Guests</label><select id="f_guests"></select></div>
+        <div class="f-field"><label for="f_flight">&#9992;&#65039; Flight number (if airport)</label><input type="text" id="f_flight" placeholder="e.g. EZY8225"></div>
+      </div>
+      <div class="f-row">
+        <div class="f-field"><label for="f_name">&#128100; Name</label><input type="text" id="f_name" placeholder="Your name"></div>
+        <div class="f-field"><label for="f_wa">&#128241; WhatsApp number</label><input type="text" id="f_wa" placeholder="+44..."></div>
+      </div>
+
+      <div class="f-field" style="margin:0 0 14px"><label style="display:flex;align-items:center;gap:8px;font-size:15px;font-weight:600;color:var(--indigo)"><input type="checkbox" id="f_fizz" style="width:18px;height:18px"> &#129346; Add fizz on board (optional extra, we confirm availability)</label></div>
+
+      <div class="price-box" id="priceBox" hidden>
+        <div class="total">&#128182; <span class="amount" id="priceAmount"></span> total for your group</div>
+        <div class="each" id="priceEach"></div>
+      </div>
+      <div class="wa-note" id="waBox" hidden>
+        <p id="waMsg" style="margin:0 0 12px"></p>
+        <a class="btn btn-green" href="https://wa.me/27695408842">&#128172; WhatsApp us</a>
+      </div>
+
+      <p class="center"><button class="btn btn-aqua" id="payBtn" type="button">&#9989; Pay and Lock It In</button></p>
+      <p class="caveat center">Secure card payment through Shopify checkout. Transfers require full payment 48 hours before pickup. The driver's time and slot are held for you and can't be offered to other paying customers. Your slot is confirmed within 48 hours of booking, and in the rare case we cannot run it you get an immediate full refund. Need a return or more than one stop? Message us on WhatsApp and we will price the whole trip for you. x</p>
+    </div>
+  </div>
+
+  <p class="signoff">Any questions before you book, just message us. x</p>
+
+  <div class="small-print">Although you might not be able to secure availability for the exact bus in the photos and videos, the standard will be the same. Fizz and drinks on board are subject to availability, and not all transfers are guaranteed fizz. You will not be charged for fizz if it is not available. Some of our fleet allow your own drinks, with a deposit fee, and others do not. Please ask about this add-on specifically. LED lights can only be seen on night transfers. 15 minutes of waiting time is included, and extra waiting time is charged per hour.</div>
+
+  <div class="foot">
+    <img class="logo" src="https://assets.cdn.filesafe.space/V6PrBRAEkyF3deHWSoO4/media/6a2900e7edb8dba658b90457.png" alt="Ibiza Party Transfers">
+    <div class="brand">Ibiza Party Transfers<span>ibizapartytransfers.com &#183; 07510 664867</span></div>
+    <img class="qr" src="https://assets.cdn.filesafe.space/V6PrBRAEkyF3deHWSoO4/media/6a3093e9e5b9322bddfac5fd.png" alt="Ibiza Party Transfers QR code">
+  </div>
+
+</div>
+
+<script>
+// Zones from the supplier rate card. Prices are the draft client prices, band A and band B.
+var ZONES = {
+  "Ibiza Airport":1,"Ibiza City":1,"Playa d'en Bossa":1,"Talamanca":1,"Can Furnet":1,"Cap Martinet":1,"San Rafael":1,"Jondal":1,
+  "San Antonio":2,"San Jose":2,"Santa Eulalia":2,"Siesta":2,"Cala Llonga":2,"Es Xarcu":2,"Es Porroig":2,"Santa Gertrudis":2,
+  "Cala Bassa":3,"Cala Comte":3,"Cala Vedella":3,"Cala d'Hort":3,"Es Canar":3,"San Miguel":3,"Santa Agnes":3,"San Carlos":3,
+  "Port of San Miguel":4,"Es Figueral":4,"Cala San Vicente":4,"Portinatx":4,"San Juan":4,"San Lorenzo":4,"Benirras":4
+};
+var PRICE_A = 250, PRICE_B = 285;   // draft, to confirm
+var BLOCKED_DATES = [];   // 'YYYY-MM-DD' entries; the island's busiest dates route to WhatsApp
+
+var pick = document.getElementById('f_pickup'), drop = document.getElementById('f_dropoff'),
+    guests = document.getElementById('f_guests'), dateEl = document.getElementById('f_date'),
+    timeEl = document.getElementById('f_time'), priceBox = document.getElementById('priceBox'),
+    waBox = document.getElementById('waBox'), waMsg = document.getElementById('waMsg'),
+    amountEl = document.getElementById('priceAmount'), eachEl = document.getElementById('priceEach'),
+    payBtn = document.getElementById('payBtn');
+
+function fillPlaces(sel, label){
+  var names = Object.keys(ZONES);
+  var html = '<option value="">' + label + '</option>';
+  for (var i=0;i<names.length;i++){ html += '<option>' + names[i] + '</option>'; }
+  html += '<option value="other">Somewhere else</option>';
+  sel.innerHTML = html;
+}
+fillPlaces(pick, 'Choose pick-up');
+fillPlaces(drop, 'Choose drop-off');
+
+var gHtml = '<option value="">How many of you</option>';
+for (var g=4; g<=14; g++){ gHtml += '<option>' + g + '</option>'; }
+gHtml += '<option value="15plus">15 or more</option>';
+guests.innerHTML = gHtml;
+
+var t = new Date(); t.setDate(t.getDate()+2);
+dateEl.min = t.toISOString().slice(0,10);
+
+function update(){
+  priceBox.hidden = true; waBox.hidden = true;
+  var p = pick.value, d = drop.value, g = guests.value;
+  if (dateEl.value && BLOCKED_DATES.indexOf(dateEl.value) !== -1){
+    waMsg.innerHTML = 'That date is one of the busiest on the island, so we confirm availability personally before taking any payment. Message us and we will lock it in for you. x';
+    waBox.hidden = false; return;
+  }
+  if (!p || !d || !g) return;
+  if (p === 'other' || d === 'other'){
+    waMsg.innerHTML = 'No problem at all, that route just needs a human to price it properly. Message us and we will quote it for you. x';
+    waBox.hidden = false; return;
+  }
+  if (g === '15plus'){
+    waMsg.innerHTML = 'Lovely big group! More than 14 means two buses, and we arrange that personally so everything lines up. Message us and we will sort it. x';
+    waBox.hidden = false; return;
+  }
+  var band = Math.max(ZONES[p], ZONES[d]) >= 3 ? PRICE_B : PRICE_A;
+  var tm = timeEl.value;
+  if (tm && tm >= '01:00' && tm < '07:00') band = PRICE_B;
+  amountEl.textContent = '\u00A3' + band;
+  eachEl.textContent = 'That is about \u00A3' + Math.ceil(band / Number(g)) + ' each for ' + g + ' of you';
+  priceBox.hidden = false;
+}
+[pick, drop, guests, timeEl, dateEl].forEach(function(el){ el.addEventListener('change', update); });
+
+payBtn.addEventListener('click', function(){
+  // TODO: post form values to the GHL inbound webhook, then send to the matching Shopify product:
+  // band A (\u00A3250) -> Shopify product link 1, band B (\u00A3285) -> Shopify product link 2
+  alert('Placeholder. This button will send your details to us and open the payment page.');
+});
+</script>
+
+</body>
+</html>
