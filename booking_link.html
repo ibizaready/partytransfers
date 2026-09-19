@@ -112,9 +112,7 @@ p{margin:0 0 12px}
   .hero-title{font-size:32px}
   .hero-sub{font-size:16px}
   .sec{padding:28px 22px 14px}
-  .v-row{grid-template-columns:1fr}
   .side-img{height:260px}
-  video.v-portrait{max-width:240px;margin:0 auto}
   .break{height:260px}
   .break .line{font-size:23px;top:22px;left:22px;right:22px}
   .grid2{grid-template-columns:1fr}
@@ -127,6 +125,10 @@ video{width:100%;aspect-ratio:16/9;border-radius:12px;display:block;background:#
 video.v-portrait{aspect-ratio:9/16}
 video.v-tall{aspect-ratio:3/4}
 .v-row{display:grid;grid-template-columns:1fr 2.07fr;gap:20px;align-items:start}
+@media (max-width:680px){
+  .v-row{grid-template-columns:1fr;gap:22px}
+  video.v-portrait{max-width:100%;margin:0}
+}
 .insert-img{width:100%;border-radius:12px;display:block;margin:20px 0 0}
 .img-natural{width:100%;height:auto;border-radius:12px;display:block}
 .night-strip{border-radius:16px;padding:24px;margin:0 0 4px;background:
@@ -375,6 +377,27 @@ function update(){
   priceBox.hidden = false;
 }
 [pick, drop, guests, timeEl, dateEl].forEach(function(el){ el.addEventListener('change', update); });
+
+// Videos: only one plays at a time, and a finished video returns you to the page
+(function(){
+  var vids = Array.prototype.slice.call(document.querySelectorAll('video'));
+  function leaveFullscreen(v){
+    try {
+      if (document.fullscreenElement) { document.exitFullscreen(); }
+      else if (document.webkitFullscreenElement) { document.webkitExitFullscreen(); }
+      else if (v.webkitDisplayingFullscreen && v.webkitExitFullscreen) { v.webkitExitFullscreen(); }
+    } catch (e) { /* nothing to exit */ }
+  }
+  vids.forEach(function(v){
+    v.addEventListener('play', function(){
+      vids.forEach(function(other){ if (other !== v) { other.pause(); } });
+    });
+    v.addEventListener('ended', function(){
+      leaveFullscreen(v);
+      v.load();   // restore the poster frame
+    });
+  });
+})();
 
 payBtn.addEventListener('click', function(){
   // TODO: post form values to the GHL inbound webhook, then send to the matching Shopify product:
